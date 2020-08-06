@@ -20,7 +20,7 @@ def player_inp():
         else:
             n = input(f'\n{b} enter your choice(1-9): ')
             entry = make_correct_choice()
-            mark = 'O'   
+            mark = 'O'
     bl[int(n)] = mark
 def msg(won):
     def yes_no():
@@ -46,14 +46,21 @@ while play:
     i = 1
     a = input("\nEnter name of Player 1(X): ")
     b = input("Enter name of Player 2(O): ")
+    print(f'''
+            7 | 8 | 9
+           -----------
+            4 | 5 | 6
+           -----------
+            1 | 2 | 3 ''')
+    print("make your choice accordingly")
     while i<=9:
         player_inp()
         print(f'''
-         {bl[7]} | {bl[8]} | {bl[9]} 
+         {bl[7]} | {bl[8]} | {bl[9]}
         -----------
          {bl[4]} | {bl[5]} | {bl[6]}
         -----------
-         {bl[1]} | {bl[2]} | {bl[3]} ''') 
+         {bl[1]} | {bl[2]} | {bl[3]} ''')
         msg(win_check())
         if win_check() == True:
             break
